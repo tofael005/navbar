@@ -14,7 +14,11 @@ const NavBar = () => {
                     <h1>LOGO</h1>
                 </div>
 
-                
+                <span className="md:hidden">
+                    {
+                        toggle ? <MdOutlineRestaurantMenu onClick={() => setToggle(!toggle)} /> : <HiOutlineMenuAlt2 onClick={() => setToggle(!toggle)} />
+                    }
+                </span>
 
                 <ul className={`flex gap-6 items-center duration-300 z-50 flex-col py-5 md:p-0 text-white bg-opacity-90 md:text-black font-semibold top-[10%] bg-black md:bg-transparent w-full md:w-auto md:flex-row absolute md:static ${toggle ? "left-0" : "-left-full"}`}>
                     <li>
